@@ -1,0 +1,14 @@
+* dir size=187.4Kb
+/home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/b
+/home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/p
+
+* file size=62.5Kb
+/home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/b/c/linux_ddff.txt
+/home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/b/linux_ddff-2.txt
+/home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/b/linux_ddff.txt
+/home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/p/c/linux_ddff.txt
+/home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/p/linux_ddff-2.txt
+/home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/p/linux_ddff.txt
+/home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/linux_ddff-3.txt
+/home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/linux_ddff.txt
+
