@@ -233,19 +233,19 @@ def dump_all():
     f.close()
     print ("the report file 'all-files-sorted.txt' has been written")
     
-print ("DDFF - Duplicate Directories and Files Finder")
-print ("by dennis(a)yurichev.com")
+print ("Sort all files largest to- smallest")
+print ("by dennis(a)yurichev.com and Pavan Yogi")
 print ("")
 
 dirs=sys.argv[1:]
 if len(dirs)==0:
-    print ("usage: ddff.py <dir1> <dir2> ... etc")
+    print ("usage: sort-all-files-largest-to-smallest.py <dir1> <dir2> ... etc")
     print ("dir can be '~', '/', etc")
     exit(0)
 
 try:
-    print ("loading db data from ddff.db")
-    f=open("ddff.db", "rb")
+    print ("loading db data from sort-files.db")
+    f=open("sort-files.db", "rb")
     fileinfo=pickle.load(f)
     f.close()
     print ("db data loaded")
@@ -271,8 +271,8 @@ except KeyboardInterrupt:
 print ("saving db data for future use. please wait. don't interrupt.")
 if interrupted==False:
     print ("The 'all-files-sorted.txt' report file is ready and can be browsed.")
-f=open("ddff.db", "wb")
+f=open("sort-files.db", "wb")
 pickle.dump(fileinfo, f)
 f.close()
-print ("db data saved to ddff.db")
+print ("db data saved to sort-files.db")
 
