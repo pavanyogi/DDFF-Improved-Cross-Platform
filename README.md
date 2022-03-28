@@ -15,7 +15,7 @@ sort-all-files-largest-to-smallest.py creates two new files:
 2. sort-files.db
 
 The file all-files-sorted.txt contains list of all files sorted and grouped by same file size. eg.
-
+```bash
 * file size=62.5Kb
 /home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/b/c/linux_ddff.txt
 /home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/b/linux_ddff-2.txt
@@ -25,7 +25,7 @@ The file all-files-sorted.txt contains list of all files sorted and grouped by s
 /home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/p/linux_ddff.txt
 /home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/linux_ddff-3.txt
 /home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/linux_ddff.txt
-
+```
 
 
 // delete too much large files (size greater than 4GB) or move them to a separate direcotry or external pen-drive/hard-disk then remove that hard-disk or pen-drive. The reason is, sometimes this script seems to be stuck when reading too much large files.
@@ -41,7 +41,7 @@ ddff.py creates two new files:
 ddff.txt contains a list of all duplicate files and folders (sorted by size)
 
 eg.
-
+```bash
 * dir size=187.4Kb
 /home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/b
 /home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/p
@@ -55,7 +55,7 @@ eg.
 /home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/p/linux_ddff.txt
 /home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/linux_ddff-3.txt
 /home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/linux_ddff.txt
-
+```
 // keep only one copy of duplicated folder/files and delete others using the following python script.
 python3 remove-duplicates.py
 
