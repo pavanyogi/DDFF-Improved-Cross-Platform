@@ -59,6 +59,7 @@ eg.
 // keep only one copy of duplicated folder/files and delete others using the following python script.
 python3 remove-duplicates.py
 
+```bash
 eg. pavan@u-20:~/.../DDFF-Improved-Cross-Platform$ python3 remove-duplicates.py
 LINE_SEPERATOR 
 
@@ -81,7 +82,7 @@ keep index:
 
 
 pavan@u-20:~/.../DDFF-Improved-Cross-Platform$
-
+```
 
 type the index of file or line number which you wants to keep, other duplicate directory/file will be removed. If you don't want to delete any folder or file then just type enter instead of providing a input.
 
