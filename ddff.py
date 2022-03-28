@@ -241,7 +241,7 @@ def dump_all():
     print ("the report file 'ddff.txt' has been written")
     
 print ("DDFF - Duplicate Directories and Files Finder")
-print ("by dennis(a)yurichev.com")
+print ("by dennis(a)yurichev.com and Pavan Yogi")
 print ("")
 
 dirs=sys.argv[1:]
