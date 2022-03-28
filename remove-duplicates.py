@@ -5,6 +5,8 @@
 import os, shutil
 from colorama import Fore, Back, Style
 
+LINE_SEPERATOR = os.linesep
+print ('LINE_SEPERATOR', LINE_SEPERATOR)
 
 def remove(path):
     """ param <path> could either be relative or absolute. """
@@ -31,14 +33,16 @@ if __name__ == "__main__":
 
 	# print('file_content', file_content)
 
-	item_list = file_content.split('\n\n')
+	# item_list = file_content.split('\n\n')
+	item_list = file_content.split(LINE_SEPERATOR+LINE_SEPERATOR)
 
 	# print('item_list', item_list)
 
 	for item in item_list:
 		# print(item)
 		# print()
-		item_lines = item.split('\n')
+		# item_lines = item.split('\n')
+		item_lines = item.split(LINE_SEPERATOR)
 		# print('len(item_lines)', len(item_lines))
 		tmp_list = []
 		for line in item_lines:
