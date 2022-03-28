@@ -102,7 +102,7 @@ def dir_calc_hash(d):
     return_None=False
 
     for t in tmp:
-        # print('t', t)
+        print('t', t)
         if d.endswith("/"):
             t2=d+t
         else:
