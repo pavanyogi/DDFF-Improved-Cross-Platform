@@ -43,7 +43,7 @@ if __name__ == "__main__":
 		tmp_list = []
 		for line in item_lines:
 			# print(line)
-			if line.startswith('/') and os.path.exists(line):
+			if os.path.exists(line):
 				# print(line)
 				tmp_list.append(line)
 			elif line.startswith('*'):
