@@ -3,13 +3,22 @@ DDFF - Duplicate Directories and Files Finder. Written in Python 3.x, it works w
 
 
 
-clone the repo
-
-cd to repo
-
+//clone the repo
+```bash
+git  clone git@github.com:pavanyogi/DDFF-Improved-Cross-Platform.git
+```
+OR
+```bash
+git clone https://github.com/pavanyogi/DDFF-Improved-Cross-Platform.git
+```
+//cd to repo
+```bash
+cd DDFF-Improved-Cross-Platform
+```
 // sort all files from largest size to smallest
+```bash
 python3 sort-all-files-largest-to-smallest.py /
-
+```
 sort-all-files-largest-to-smallest.py creates two new files:
 1. all-files-sorted.txt
 2. sort-files.db
@@ -30,8 +39,9 @@ The file all-files-sorted.txt contains list of all files sorted and grouped by s
 
 // delete too much large files (size greater than 4GB) or move them to a separate direcotry or external pen-drive/hard-disk then remove that hard-disk or pen-drive. The reason is, sometimes this script seems to be stuck when reading too much large files.
 
+```bash
 python3 ddff.py /
-
+```
 Note: we can close the program execution by pressing the ctrl+c and can resume the program execution again. When a user interruppts the program exection then script saves the required results into db and resumes in the next run.
 
 ddff.py creates two new files:
@@ -57,7 +67,9 @@ eg.
 /home/pavan/Documents/aux/tmp-git/DDFF-Improved-Cross-Platform/test1/linux_ddff.txt
 ```
 // keep only one copy of duplicated folder/files and delete others using the following python script.
+```bash
 python3 remove-duplicates.py
+```
 
 ```bash
 eg. pavan@u-20:~/.../DDFF-Improved-Cross-Platform$ python3 remove-duplicates.py
