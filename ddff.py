@@ -19,6 +19,16 @@ import os, hashlib, pickle, sys
 import math
 from collections import Counter
 
+
+DIRECTORY_SEPERATOR = os.sep
+LINE_SEPERATOR = os.linesep
+print ('DIRECTORY_SEPERATOR', DIRECTORY_SEPERATOR)
+prefix = ''
+
+if DIRECTORY_SEPERATOR == '/':
+    prefix = '/'
+print ('prefix', prefix)
+
 # from https://rosettacode.org/wiki/Entropy#Python
 def entropy(s):
     p, lns = Counter(s), float(len(s))
@@ -55,7 +65,7 @@ def file_calc_hash (fname):
     if fname in fileinfo:
         if fileinfo[fname][1]==mtime:
             all.append((False, fname, fileinfo[fname][0], fileinfo[fname][2]))
-            #print fileinfo[fname]
+            # print(fileinfo[fname])
             return fileinfo[fname][0],fileinfo[fname][2]
     fsize=os.path.getsize(fname)
     if fsize < HASHBLOCK*BLOCKS or PARANOID:
@@ -97,10 +107,11 @@ def dir_calc_hash(d):
     return_None=False
 
     for t in tmp:
+        # print('t', t)
         if d.endswith("/"):
             t2=d+t
         else:
-            t2=d+"/"+t
+            t2=d+DIRECTORY_SEPERATOR+t
         if os.path.islink(t2):
             continue
         if os.path.isfile(t2):
@@ -147,11 +158,11 @@ def dir_calc_hash(d):
 def chop_path_element_right(p):
     #if p.endswith("/"):
     #    p=p[:-1]
-    t=p.split("/")
+    t=p.split(DIRECTORY_SEPERATOR)
     t=list(filter(None, t)) # https://stackoverflow.com/questions/3845423/remove-empty-strings-from-a-list-of-strings
     if len(t) <= 1:
         return None
-    return "/"+"/".join(t[:-1])
+    return prefix+DIRECTORY_SEPERATOR.join(t[:-1])
 
 # find fname/path among [already] dumped items
 # "chop" the path by one item, until it can be found in dumped[]
