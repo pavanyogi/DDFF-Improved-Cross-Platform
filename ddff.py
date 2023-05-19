@@ -222,7 +222,7 @@ def dump_all():
 
     results_dumped=set()
 
-    f=open("ddff.txt", "wt")
+    f=open("ddff.txt", "wt", encoding="utf-8")
     for r in results:
         if r[1]<LIMIT:
             break
@@ -247,7 +247,7 @@ print ("")
 dirs=sys.argv[1:]
 if len(dirs)==0:
     print ("usage: ddff.py <dir1> <dir2> ... etc")
-    print ("dir can be '~', '/', etc")
+    print ("dir can be '~', '/', ' C: D: E: F:', etc")
     exit(0)
 
 try:
