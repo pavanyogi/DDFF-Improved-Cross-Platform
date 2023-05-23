@@ -4,6 +4,8 @@
 # from os import path
 import os, shutil, re
 from colorama import Fore, Back, Style, init
+import sys
+
 
 # Initialize colorama
 init()
@@ -49,6 +51,35 @@ if __name__ == "__main__":
         item_list = re.split(r'\n\s*\n', list_text)
 
     # print('item_list', item_list)
+    
+    lines_to_skip = 0
+    
+    line_skip_count = 0
+    item_list_skip_count = 0
+    
+    # Get the number of lines to skip from the command line argument
+    if len(sys.argv) > 1 and sys.argv[1].isdigit():
+        lines_to_skip = int(sys.argv[1])
+    
+    for item in item_list:
+        #print(item)
+        #print()
+        # item_lines = item.split('\n')
+        item_lines = item.split(LINE_SEPERATOR)
+        #print('len(item_lines)', len(item_lines))
+        
+        if lines_to_skip > 0 and line_skip_count < lines_to_skip:
+            line_skip_count += len(item_lines)
+            
+            # add 1 due to one blank line in between
+            line_skip_count += 1
+            item_list_skip_count += 1
+            
+    print('item_list_skip_count', item_list_skip_count)
+
+    item_list_skip_count -= 2 
+    if item_list_skip_count > 0:
+        item_list = item_list[item_list_skip_count:]
 
     for item in item_list:
         # print(item)
